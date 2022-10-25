@@ -18,7 +18,7 @@ public class Skrzynia : MonoBehaviour
     public Transform from;
     public Transform to;
 
-    // metoda Start() wywo³ywana jest przy inicjalizacji obiektu
+    // metoda Start() wywoï¿½ywana jest przy inicjalizacji obiektu
     void Start()
     {
         // ustawienie obiektu w pozycji (0, 0, 0)
@@ -32,7 +32,7 @@ public class Skrzynia : MonoBehaviour
 
 
     // krok rotacji, wyrazony w procentach, o jaki zostanie wykonana rotacja
-    // w ka¿dej klatce animacji
+    // w kaï¿½dej klatce animacji
     private float percentage = 0.01f;
 
     void Update()
@@ -41,11 +41,24 @@ public class Skrzynia : MonoBehaviour
     }
     void FixedUpdate()
     {
-        // sk³adowa y wektora prêdkoœci
+        // skï¿½adowa y wektora prï¿½dkoï¿½ci
         if (rb.velocity.y == 0)
         {
-            // dzia³amy si³¹ na cia³o A :)
+            // dziaï¿½amy siï¿½ï¿½ na ciaï¿½o A :)
             rb.AddForce(Vector3.up * force, ForceMode.Impulse);
         }
     }
+
+    // random object spawner
+    // void spawnRandomVector()
+    // {
+    //     int randomIndex = Random.Range(0, myObjects.Length);
+    //     Vector3 randomSpawnPosition = new Vector3(Random.Range(0, 10), 0.5f, Random.Range(0, 10));
+
+    //     if (!positions.Contains(randomSpawnPosition))
+    //     {
+    //         i++;
+    //         Instantiate(myObjects[randomIndex], randomSpawnPosition, Quaternion.identity);
+    //     }
+    // }
 }
