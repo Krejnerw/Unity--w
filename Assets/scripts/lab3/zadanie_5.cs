@@ -18,6 +18,7 @@ public class zadanie_5 : MonoBehaviour
             if (!positions.Contains(randomSpawnPosition))
             {
                 i++;
+                positions.Add(randomSpawnPosition);
                 Instantiate(myObjects[randomIndex], randomSpawnPosition, Quaternion.identity);
             }
         }
